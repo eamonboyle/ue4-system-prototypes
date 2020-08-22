@@ -6,6 +6,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Engine/Canvas.h"
 #include "UI/InventoryDisplay.h"
+#include "UI/MainMenuWidget.h"
 
 AMainHUD::AMainHUD()
 {
@@ -13,8 +14,6 @@ AMainHUD::AMainHUD()
 
 void AMainHUD::BeginPlay()
 {
-    UE_LOG(LogTemp, Warning, TEXT("BEGINPLAY ON MAINHUD"));
-       
     if (InventoryClass != nullptr)
     {        
         InventoryHUD = CreateWidget<UInventoryDisplay>(GetOwningPlayerController(), InventoryClass);
@@ -23,10 +22,17 @@ void AMainHUD::BeginPlay()
         InventoryHUD->AddToViewport();
     }
 
-    // if (MainMenuClass != nullptr)
-    // {
-    //     
-    // }
+    if (MainMenuClass != nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("FOUND MENU CLASS"));
+        MainMenu = CreateWidget<UMainMenuWidget>(GetOwningPlayerController(), MainMenuClass);
+        checkSlow(MainMenu != nullptr);
+
+        MainMenu->AddToViewport();
+
+        MainMenu->OnGameLoadedFixup(GetWorld());
+        MainMenu->Close();
+    }
 }
 
 void AMainHUD::DrawHUD()
@@ -72,4 +78,17 @@ void AMainHUD::InitializeInventory(UInventory* PlayerInventory)
 
 void AMainHUD::ToggleMainMenu()
 {
+    UE_LOG(LogTemp, Warning, TEXT("Toggle Main Menu"));
+
+    if (MainMenu != nullptr)
+    {
+        if (MainMenu->GetVisibility() == ESlateVisibility::Visible)
+        {
+            MainMenu->Close();
+        }
+        else
+        {
+            MainMenu->Open();
+        }
+    }
 }

@@ -32,8 +32,8 @@ protected:
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     TSubclassOf<UUserWidget> InventoryClass;
 
-    // UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    // TSubclassOf<class UMainMenuWidget> MainMenuClass;
+    UPROPERTY(EditAnywhere, BlueprintReadWrite)
+    TSubclassOf<UUserWidget> MainMenuClass;
 
     class UInventoryDisplay* InventoryHUD;
     class UMainMenuWidget* MainMenu;

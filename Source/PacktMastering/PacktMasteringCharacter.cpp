@@ -80,6 +80,9 @@ void APacktMasteringCharacter::SetupPlayerInputComponent(class UInputComponent* 
 	// inventory
 	PlayerInputComponent->BindAction("InventoryUp", IE_Pressed, this, &APacktMasteringCharacter::SelectNextWeapon);
 	PlayerInputComponent->BindAction("InventoryDown", IE_Pressed, this, &APacktMasteringCharacter::SelectPreviousWeapon);
+
+	// main menu
+	PlayerInputComponent->BindAction("ToggleMenu", IE_Pressed, this, &APacktMasteringCharacter::ToggleMainMenu);
 }
 
 void APacktMasteringCharacter::EquipWeapon(TSubclassOf<AWeaponBase> Weapon)
@@ -171,4 +174,14 @@ void APacktMasteringCharacter::SelectNextWeapon()
 void APacktMasteringCharacter::SelectPreviousWeapon()
 {
 	Inventory->SelectPreviousWeapon();
+}
+
+void APacktMasteringCharacter::ToggleMainMenu()
+{
+	AMainHUD* HUD = Cast<AMainHUD>(CastChecked<APlayerController>(GetController())->GetHUD());
+
+	if (HUD != nullptr)
+	{
+		HUD->ToggleMainMenu();
+	}
 }

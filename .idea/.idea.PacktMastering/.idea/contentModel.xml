@@ -45,6 +45,7 @@
             <e p="UI" t="Include">
               <e p="InventoryDisplay.cpp" t="Include" />
               <e p="MainHUD.cpp" t="Include" />
+              <e p="MainMenuWidget.cpp" t="Include" />
             </e>
             <e p="Weapons" t="Include">
               <e p="Inventory.cpp" t="Include" />
@@ -62,6 +63,7 @@
             <e p="UI" t="Include">
               <e p="InventoryDisplay.h" t="Include" />
               <e p="MainHUD.h" t="Include" />
+              <e p="MainMenuWidget.h" t="Include" />
             </e>
             <e p="Weapons" t="Include">
               <e p="Inventory.h" t="Include" />
@@ -15458,164 +15460,6 @@
             <e p="HDRIBackdrop.h" t="Include" />
             <e p="HDRIBackdropPlacement.h" t="Include" />
             <e p="HDRIBackdropStyle.h" t="Include" />
-          </e>
-        </e>
-      </e>
-    </e>
-    <e p="F:\Epic Games\UE_4.25\Engine\Plugins\Runtime\HoudiniEngine" t="Include">
-      <e p="HoudiniEngine.uplugin" t="Include" />
-      <e p="Resources" t="Include">
-        <e p="Icon128.png" t="Include" />
-      </e>
-      <e p="Source" t="Include">
-        <e p="HoudiniEngineEditor" t="Include">
-          <e p="HoudiniEngineEditor.Build.cs" t="Include" />
-          <e p="Private" t="Include">
-            <e p="HoudiniAssetActorFactory.cpp" t="Include" />
-            <e p="HoudiniAssetActorFactory.h" t="Include" />
-            <e p="HoudiniAssetBroker.cpp" t="Include" />
-            <e p="HoudiniAssetBroker.h" t="Include" />
-            <e p="HoudiniAssetComponentDetails.cpp" t="Include" />
-            <e p="HoudiniAssetComponentDetails.h" t="Include" />
-            <e p="HoudiniAssetFactory.cpp" t="Include" />
-            <e p="HoudiniAssetFactory.h" t="Include" />
-            <e p="HoudiniAssetLogWidget.cpp" t="Include" />
-            <e p="HoudiniAssetLogWidget.h" t="Include" />
-            <e p="HoudiniAssetTypeActions.cpp" t="Include" />
-            <e p="HoudiniAssetTypeActions.h" t="Include" />
-            <e p="HoudiniEngineEditor.cpp" t="Include" />
-            <e p="HoudiniEngineEditor.h" t="Include" />
-            <e p="HoudiniEngineEditorLocalization.h" t="Include" />
-            <e p="HoudiniEngineEditorPrivatePCH.h" t="Include" />
-            <e p="HoudiniHandleComponentVisualizer.cpp" t="Include" />
-            <e p="HoudiniHandleComponentVisualizer.h" t="Include" />
-            <e p="HoudiniParameterDetails.cpp" t="Include" />
-            <e p="HoudiniParameterDetails.h" t="Include" />
-            <e p="HoudiniRuntimeSettingsDetails.cpp" t="Include" />
-            <e p="HoudiniRuntimeSettingsDetails.h" t="Include" />
-            <e p="HoudiniShelfEdMode.cpp" t="Include" />
-            <e p="HoudiniShelfEdMode.h" t="Include" />
-            <e p="HoudiniShelfEdModeToolkit.cpp" t="Include" />
-            <e p="HoudiniShelfEdModeToolkit.h" t="Include" />
-            <e p="HoudiniSplineComponentVisualizer.cpp" t="Include" />
-            <e p="HoudiniSplineComponentVisualizer.h" t="Include" />
-            <e p="SHoudiniToolPalette.cpp" t="Include" />
-            <e p="SHoudiniToolPalette.h" t="Include" />
-            <e p="SNewFilePathPicker.cpp" t="Include" />
-            <e p="SNewFilePathPicker.h" t="Include" />
-          </e>
-          <e p="Public" t="Include">
-            <e p="IHoudiniEngineEditor.h" t="Include" />
-          </e>
-        </e>
-        <e p="HoudiniEngineRuntime" t="Include">
-          <e p="HoudiniEngineRuntime.Build.cs" t="Include" />
-          <e p="Private" t="Include">
-            <e p="HoudiniApi.cpp" t="Include" />
-            <e p="HoudiniAsset.cpp" t="Include" />
-            <e p="HoudiniAssetActor.cpp" t="Include" />
-            <e p="HoudiniAssetActor.h" t="Include" />
-            <e p="HoudiniAssetComponent.cpp" t="Include" />
-            <e p="HoudiniAssetComponent.h" t="Include" />
-            <e p="HoudiniAssetComponentMaterials.cpp" t="Include" />
-            <e p="HoudiniAssetComponentMaterials.h" t="Include" />
-            <e p="HoudiniAssetInput.cpp" t="Include" />
-            <e p="HoudiniAssetInput.h" t="Include" />
-            <e p="HoudiniAssetInstanceInput.cpp" t="Include" />
-            <e p="HoudiniAssetInstanceInput.h" t="Include" />
-            <e p="HoudiniAssetInstanceInputField.cpp" t="Include" />
-            <e p="HoudiniAssetInstanceInputField.h" t="Include" />
-            <e p="HoudiniAssetParameter.cpp" t="Include" />
-            <e p="HoudiniAssetParameter.h" t="Include" />
-            <e p="HoudiniAssetParameterButton.cpp" t="Include" />
-            <e p="HoudiniAssetParameterButton.h" t="Include" />
-            <e p="HoudiniAssetParameterChoice.cpp" t="Include" />
-            <e p="HoudiniAssetParameterChoice.h" t="Include" />
-            <e p="HoudiniAssetParameterColor.cpp" t="Include" />
-            <e p="HoudiniAssetParameterColor.h" t="Include" />
-            <e p="HoudiniAssetParameterFile.cpp" t="Include" />
-            <e p="HoudiniAssetParameterFile.h" t="Include" />
-            <e p="HoudiniAssetParameterFloat.cpp" t="Include" />
-            <e p="HoudiniAssetParameterFloat.h" t="Include" />
-            <e p="HoudiniAssetParameterFolder.cpp" t="Include" />
-            <e p="HoudiniAssetParameterFolder.h" t="Include" />
-            <e p="HoudiniAssetParameterFolderList.cpp" t="Include" />
-            <e p="HoudiniAssetParameterFolderList.h" t="Include" />
-            <e p="HoudiniAssetParameterInt.cpp" t="Include" />
-            <e p="HoudiniAssetParameterInt.h" t="Include" />
-            <e p="HoudiniAssetParameterLabel.cpp" t="Include" />
-            <e p="HoudiniAssetParameterLabel.h" t="Include" />
-            <e p="HoudiniAssetParameterMultiparm.cpp" t="Include" />
-            <e p="HoudiniAssetParameterMultiparm.h" t="Include" />
-            <e p="HoudiniAssetParameterRamp.cpp" t="Include" />
-            <e p="HoudiniAssetParameterRamp.h" t="Include" />
-            <e p="HoudiniAssetParameterSeparator.cpp" t="Include" />
-            <e p="HoudiniAssetParameterSeparator.h" t="Include" />
-            <e p="HoudiniAssetParameterString.cpp" t="Include" />
-            <e p="HoudiniAssetParameterString.h" t="Include" />
-            <e p="HoudiniAssetParameterToggle.cpp" t="Include" />
-            <e p="HoudiniAssetParameterToggle.h" t="Include" />
-            <e p="HoudiniAttributeDataComponent.cpp" t="Include" />
-            <e p="HoudiniAttributeDataComponent.h" t="Include" />
-            <e p="HoudiniEngine.cpp" t="Include" />
-            <e p="HoudiniEngine.h" t="Include" />
-            <e p="HoudiniEngineBakeUtils.cpp" t="Include" />
-            <e p="HoudiniEngineBakeUtils.h" t="Include" />
-            <e p="HoudiniEngineCommandlet.cpp" t="Include" />
-            <e p="HoudiniEngineCommandlet.h" t="Include" />
-            <e p="HoudiniEngineInstancerUtils.cpp" t="Include" />
-            <e p="HoudiniEngineInstancerUtils.h" t="Include" />
-            <e p="HoudiniEngineMaterialUtils.cpp" t="Include" />
-            <e p="HoudiniEngineMaterialUtils.h" t="Include" />
-            <e p="HoudiniEngineRuntimeLocalization.h" t="Include" />
-            <e p="HoudiniEngineRuntimePrivatePCH.h" t="Include" />
-            <e p="HoudiniEngineScheduler.cpp" t="Include" />
-            <e p="HoudiniEngineScheduler.h" t="Include" />
-            <e p="HoudiniEngineString.cpp" t="Include" />
-            <e p="HoudiniEngineSubstance.cpp" t="Include" />
-            <e p="HoudiniEngineSubstance.h" t="Include" />
-            <e p="HoudiniEngineTask.cpp" t="Include" />
-            <e p="HoudiniEngineTaskInfo.cpp" t="Include" />
-            <e p="HoudiniEngineUtils.cpp" t="Include" />
-            <e p="HoudiniEngineUtils.h" t="Include" />
-            <e p="HoudiniGeoPartObject.cpp" t="Include" />
-            <e p="HoudiniHandleComponent.cpp" t="Include" />
-            <e p="HoudiniHandleComponent.h" t="Include" />
-            <e p="HoudiniInstancedActorComponent.cpp" t="Include" />
-            <e p="HoudiniInstancedActorComponent.h" t="Include" />
-            <e p="HoudiniLandscapeUtils.cpp" t="Include" />
-            <e p="HoudiniLandscapeUtils.h" t="Include" />
-            <e p="HoudiniMeshSplitInstancerComponent.cpp" t="Include" />
-            <e p="HoudiniMeshSplitInstancerComponent.h" t="Include" />
-            <e p="HoudiniParamUtils.cpp" t="Include" />
-            <e p="HoudiniParamUtils.h" t="Include" />
-            <e p="HoudiniPluginSerializationVersion.cpp" t="Include" />
-            <e p="HoudiniPluginSerializationVersion.h" t="Include" />
-            <e p="HoudiniRuntimeSettings.cpp" t="Include" />
-            <e p="HoudiniRuntimeSettings.h" t="Include" />
-            <e p="HoudiniSplineComponent.cpp" t="Include" />
-            <e p="HoudiniSplineComponent.h" t="Include" />
-            <e p="Tests" t="Include">
-              <e p="HoudiniEngineRuntimeTest.cpp" t="Include" />
-              <e p="HoudiniEngineRuntimeTest.h" t="Include" />
-            </e>
-          </e>
-          <e p="Public" t="Include">
-            <e p="HAPI" t="Include">
-              <e p="HAPI.h" t="Include" />
-              <e p="HAPI_API.h" t="Include" />
-              <e p="HAPI_Common.h" t="Include" />
-              <e p="HAPI_Helpers.h" t="Include" />
-              <e p="HAPI_Version.h" t="Include" />
-            </e>
-            <e p="HoudiniApi.h" t="Include" />
-            <e p="HoudiniAsset.h" t="Include" />
-            <e p="HoudiniCookHandler.h" t="Include" />
-            <e p="HoudiniEngineString.h" t="Include" />
-            <e p="HoudiniEngineTask.h" t="Include" />
-            <e p="HoudiniEngineTaskInfo.h" t="Include" />
-            <e p="HoudiniGeoPartObject.h" t="Include" />
-            <e p="IHoudiniEngine.h" t="Include" />
           </e>
         </e>
       </e>

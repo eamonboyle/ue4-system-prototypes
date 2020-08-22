@@ -70,6 +70,8 @@ protected:
     void SelectNextWeapon();
     void SelectPreviousWeapon();
 
+    void ToggleMainMenu();
+
 protected:
     // APawn interface
     virtual void SetupPlayerInputComponent(UInputComponent* InputComponent) override;
