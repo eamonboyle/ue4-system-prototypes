@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "WeaponPickup.h"
 #include "Components/ActorComponent.h"
+#include "UI/SavedActorInterface.h"
 #include "Weapons/WeaponBase.h"
 #include "Inventory.generated.h"
 
@@ -15,14 +16,17 @@ struct FWeaponProperties
 
 public:
 
-    FWeaponProperties() { };
+    FWeaponProperties()
+    {
+    };
 
     FWeaponProperties(TSubclassOf<class AWeaponBase> Class, UTexture2D* Icon, int Power, int AmmoCount) :
         WeaponClass(Class),
         InventoryIcon(Icon),
         WeaponPower(Power),
         Ammo(AmmoCount)
-    { }
+    {
+    }
 
     bool operator==(const FWeaponProperties& Other) const
     {
@@ -54,14 +58,14 @@ public:
 public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
     TSubclassOf<AWeaponPickup> DefaultWeaponPickup;
-    
+
     virtual void AddDefaultWeapon();
 
     void SelectBestWeapon();
 
     void SelectWeapon(FWeaponProperties Weapon);
 
-    void AddWeapon(const FWeaponProperties &Properties);
+    void AddWeapon(const FWeaponProperties& Properties);
 
     FORCEINLINE TSubclassOf<AWeaponBase> GetCurrentWeapon() const { return CurrentWeapon; }
 
@@ -73,13 +77,20 @@ public:
     void SelectPreviousWeapon();
 
     DECLARE_EVENT_OneParam(UInventory, FSelectedWeaponChanged, FWeaponProperties);
+
     FSelectedWeaponChanged OnSelectedWeaponChanged;
 
     DECLARE_EVENT_OneParam(UInventory, FWeaponAdded, FWeaponProperties);
+
     FSelectedWeaponChanged OnWeaponAdded;
 
     DECLARE_EVENT_OneParam(UInventory, FWeaponRemoved, FWeaponProperties);
+
     FSelectedWeaponChanged OnWeaponRemoved;
+
+    FORCEINLINE TArray<FWeaponProperties>& GetWeaponsArray() { return WeaponsArray; }
+
+    FORCEINLINE int GetCurrentWeaponPower() const { return CurrentWeaponPower; }
 
 protected:
     TArray<FWeaponProperties> WeaponsArray;

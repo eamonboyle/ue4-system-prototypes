@@ -31,7 +31,7 @@ public:
     void PopulateSaveFiles();
 
     void OnGameLoadedFixup(UWorld* World);
-    static TArray<uint8> BinaryData;
+	TArray<uint8> BinaryData;
 
 protected:
     UPROPERTY(BlueprintReadOnly)

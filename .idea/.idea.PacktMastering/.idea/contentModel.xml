@@ -46,6 +46,7 @@
               <e p="InventoryDisplay.cpp" t="Include" />
               <e p="MainHUD.cpp" t="Include" />
               <e p="MainMenuWidget.cpp" t="Include" />
+              <e p="SavedActorInterface.cpp" t="Include" />
             </e>
             <e p="Weapons" t="Include">
               <e p="Inventory.cpp" t="Include" />
@@ -64,6 +65,7 @@
               <e p="InventoryDisplay.h" t="Include" />
               <e p="MainHUD.h" t="Include" />
               <e p="MainMenuWidget.h" t="Include" />
+              <e p="SavedActorInterface.h" t="Include" />
             </e>
             <e p="Weapons" t="Include">
               <e p="Inventory.h" t="Include" />
