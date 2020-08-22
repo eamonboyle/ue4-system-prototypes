@@ -4,6 +4,7 @@
     <e p="C:\Users\blaow\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
     <e p="C:\Users\blaow\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\ReSharperHost\v202\SolutionCaches\_PacktMastering.2064844471.00" t="ExcludeRecursive" />
     <e p="C:\Users\blaow\OneDrive\Documents\Unreal\PacktMastering" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
       <e p="Config" t="Include">
         <e p="DefaultEditor.ini" t="Include" />
         <e p="DefaultEditorPerProjectUserSettings.ini" t="Include" />
@@ -35,6 +36,9 @@
           <e p="PacktMasteringProjectile.cpp" t="Include" />
           <e p="PacktMasteringProjectile.h" t="Include" />
           <e p="Private" t="Include">
+            <e p="Cameras" t="Include">
+              <e p="IconCamera.cpp" t="Include" />
+            </e>
             <e p="Characters" t="Include">
               <e p="StealthCharacter.cpp" t="Include" />
             </e>
@@ -45,6 +49,9 @@
             </e>
           </e>
           <e p="Public" t="Include">
+            <e p="Cameras" t="Include">
+              <e p="IconCamera.h" t="Include" />
+            </e>
             <e p="Characters" t="Include">
               <e p="StealthCharacter.h" t="Include" />
             </e>

@@ -9,7 +9,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/Weapons/Inventory.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Public/Cameras/IconCamera.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Public/Weapons/WeaponPickup.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/Cameras/IconCamera.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/Weapons/WeaponPickup.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://F:/Epic Games/UE_4.25/Engine/Source/Runtime/CoreUObject/Public/Templates/SubclassOf.h" root0="FORCE_HIGHLIGHTING" />
@@ -35,6 +37,8 @@
         <option value="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Weapons/Inventory.cpp" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Cameras/IconCamera.h" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Cameras/IconCamera.cpp" />
       </list>
     </option>
   </component>
@@ -471,7 +475,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598046237892</updated>
       <workItem from="1598046284373" duration="4704000" />
-      <workItem from="1598089413486" duration="6101000" />
+      <workItem from="1598089413486" duration="9128000" />
     </task>
     <servers />
   </component>
