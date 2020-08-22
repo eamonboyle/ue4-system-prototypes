@@ -36,6 +36,9 @@
           <e p="PacktMasteringProjectile.cpp" t="Include" />
           <e p="PacktMasteringProjectile.h" t="Include" />
           <e p="Private" t="Include">
+            <e p="AI" t="Include">
+              <e p="MeleeAIController.cpp" t="Include" />
+            </e>
             <e p="Cameras" t="Include">
               <e p="IconCamera.cpp" t="Include" />
             </e>
@@ -55,6 +58,9 @@
             </e>
           </e>
           <e p="Public" t="Include">
+            <e p="AI" t="Include">
+              <e p="MeleeAIController.h" t="Include" />
+            </e>
             <e p="Cameras" t="Include">
               <e p="IconCamera.h" t="Include" />
             </e>
