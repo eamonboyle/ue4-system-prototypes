@@ -3,21 +3,42 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "WeaponPickup.h"
 #include "Components/ActorComponent.h"
 #include "Weapons/WeaponBase.h"
 #include "Inventory.generated.h"
 
-USTRUCT()
+USTRUCT(BlueprintType)
 struct FWeaponProperties
 {
-    GENERATED_BODY()
+    GENERATED_USTRUCT_BODY()
 
 public:
-    UPROPERTY()
+
+    FWeaponProperties() { };
+
+    FWeaponProperties(TSubclassOf<class AWeaponBase> Class, UTexture2D* Icon, int Power, int AmmoCount) :
+        WeaponClass(Class),
+        InventoryIcon(Icon),
+        WeaponPower(Power),
+        Ammo(AmmoCount)
+    { }
+
+    bool operator==(const FWeaponProperties& Other) const
+    {
+        return Other.WeaponClass == WeaponClass;
+    }
+
+    UPROPERTY(BlueprintReadOnly)
     TSubclassOf<class AWeaponBase> WeaponClass;
-    UPROPERTY()
+
+    UPROPERTY(BlueprintReadOnly)
+    class UTexture2D* InventoryIcon;
+
+    UPROPERTY(BlueprintReadOnly)
     int WeaponPower;
-    UPROPERTY()
+
+    UPROPERTY(BlueprintReadOnly)
     int Ammo;
 };
 
@@ -30,19 +51,17 @@ public:
     // Sets default values for this component's properties
     UInventory();
 
-protected:
-    // Called when the game starts
-    virtual void BeginPlay() override;
-
 public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite)
-    TSubclassOf<AWeaponBase> DefaultWeapon;
+    TSubclassOf<AWeaponPickup> DefaultWeaponPickup;
+    
+    virtual void AddDefaultWeapon();
 
     void SelectBestWeapon();
 
-    void SelectWeapon(TSubclassOf<AWeaponBase> Weapon);
+    void SelectWeapon(FWeaponProperties Weapon);
 
-    void AddWeapon(TSubclassOf<AWeaponBase> Weapon, int Ammunition, uint8 WeaponPower);
+    void AddWeapon(const FWeaponProperties &Properties);
 
     FORCEINLINE TSubclassOf<AWeaponBase> GetCurrentWeapon() const { return CurrentWeapon; }
 
@@ -52,6 +71,15 @@ public:
 
     void SelectNextWeapon();
     void SelectPreviousWeapon();
+
+    DECLARE_EVENT_OneParam(UInventory, FSelectedWeaponChanged, FWeaponProperties);
+    FSelectedWeaponChanged OnSelectedWeaponChanged;
+
+    DECLARE_EVENT_OneParam(UInventory, FWeaponAdded, FWeaponProperties);
+    FSelectedWeaponChanged OnWeaponAdded;
+
+    DECLARE_EVENT_OneParam(UInventory, FWeaponRemoved, FWeaponProperties);
+    FSelectedWeaponChanged OnWeaponRemoved;
 
 protected:
     TArray<FWeaponProperties> WeaponsArray;

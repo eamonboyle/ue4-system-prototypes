@@ -14,6 +14,19 @@ AWeaponPickup::AWeaponPickup()
     WeaponPower = 1;
 }
 
+void AWeaponPickup::HavePlayerPickup(APacktMasteringCharacter* Player)
+{
+    UInventory* Inventory = Player->GetInventory();
+
+    FWeaponProperties Props(WeaponClass, InventoryIcon, WeaponPower, Ammunition);
+
+    Inventory->AddWeapon(Props);
+
+    Inventory->SelectBestWeapon();
+
+    Destroy();
+}
+
 void AWeaponPickup::BeginPlay()
 {
     Super::BeginPlay();
@@ -25,10 +38,7 @@ void AWeaponPickup::NotifyActorBeginOverlap(AActor* OtherActor)
 
     if (Player == nullptr) return;
 
-    UInventory* Inventory = Player->GetInventory();
-    Inventory->AddWeapon(WeaponClass, Ammunition, WeaponPower);
-    Inventory->SelectBestWeapon();
-    Destroy();
+    HavePlayerPickup(Player);
 }
 
 void AWeaponPickup::Tick(float DeltaTime)

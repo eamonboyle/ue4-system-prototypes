@@ -42,6 +42,10 @@
             <e p="Characters" t="Include">
               <e p="StealthCharacter.cpp" t="Include" />
             </e>
+            <e p="UI" t="Include">
+              <e p="InventoryDisplay.cpp" t="Include" />
+              <e p="MainHUD.cpp" t="Include" />
+            </e>
             <e p="Weapons" t="Include">
               <e p="Inventory.cpp" t="Include" />
               <e p="WeaponBase.cpp" t="Include" />
@@ -54,6 +58,10 @@
             </e>
             <e p="Characters" t="Include">
               <e p="StealthCharacter.h" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="InventoryDisplay.h" t="Include" />
+              <e p="MainHUD.h" t="Include" />
             </e>
             <e p="Weapons" t="Include">
               <e p="Inventory.h" t="Include" />

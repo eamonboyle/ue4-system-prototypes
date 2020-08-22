@@ -40,6 +40,10 @@ public:
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
     class UInventory* Inventory;
+
+    virtual void SetInventory(class UInventory* Inv);
+
+    virtual void InitializeInventoryHUD();
 protected:
 
     /** Fires a projectile. */

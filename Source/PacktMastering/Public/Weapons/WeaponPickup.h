@@ -15,6 +15,8 @@ public:
 	// Sets default values for this actor's properties
 	AWeaponPickup();
 
+	void HavePlayerPickup(class APacktMasteringCharacter* Player);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -27,6 +29,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TSubclassOf<class AWeaponBase> WeaponClass;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	class UTexture2D* InventoryIcon;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	float RotationSpeed;

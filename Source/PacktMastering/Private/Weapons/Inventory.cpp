@@ -3,6 +3,7 @@
 
 #include "Weapons/Inventory.h"
 #include "PacktMastering/PacktMasteringCharacter.h"
+#include "Weapons/WeaponPickup.h"
 
 #define UNLIMITED_AMMO -1
 
@@ -13,57 +14,71 @@ UInventory::UInventory()
     check(GetOwner() == nullptr || MyOwner != nullptr);
 }
 
-void UInventory::BeginPlay()
+void UInventory::AddDefaultWeapon()
 {
-    Super::BeginPlay();
-
-    if (DefaultWeapon != nullptr)
+    if (DefaultWeaponPickup != nullptr)
     {
-        AddWeapon(DefaultWeapon, UNLIMITED_AMMO, 0);
+        FActorSpawnParameters ActorSpawnParameters;
+        ActorSpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+        AWeaponPickup* DefaultPickup = GetWorld()->SpawnActor<AWeaponPickup>(
+            DefaultWeaponPickup, FVector(0.f), FRotator(0.f), ActorSpawnParameters);
+        DefaultPickup->HavePlayerPickup(MyOwner);
     }
 }
 
 void UInventory::SelectBestWeapon()
 {
-    UE_LOG(LogTemp, Warning, TEXT("SELECT BEST WEAPON"));
+    int HighestWeaponPower = CurrentWeaponPower;
+    FWeaponProperties BestWeapon;
 
-    for (auto WeaponIt = WeaponsArray.CreateIterator(); WeaponIt; ++WeaponIt)
+    for (auto WeaponIt = WeaponsArray.CreateConstIterator(); WeaponIt; ++WeaponIt)
     {
-        UE_LOG(LogTemp, Warning, TEXT("Weapon Power: %d"), WeaponIt->WeaponPower);
+        const FWeaponProperties& CurrentProps = *WeaponIt;
 
-        // if (WeaponIt->WeaponPower > CurrentWeaponPower)
-        // {
-        SelectWeapon(*WeaponIt->WeaponClass);
-        // break;
-        // }
-    }
-}
+        // skip any weapons that don't have ammo, ammo of -1 is a special case meaning it has unlimited ammo
+        if (CurrentProps.Ammo == 0)
+            continue;
 
-void UInventory::SelectWeapon(TSubclassOf<AWeaponBase> Weapon)
-{
-    MyOwner->EquipWeapon(Weapon);
-    CurrentWeapon = Weapon;
-}
-
-void UInventory::AddWeapon(TSubclassOf<AWeaponBase> Weapon, int Ammunition, uint8 WeaponPower)
-{
-    for (auto WeaponIt = WeaponsArray.CreateIterator(); WeaponIt; ++WeaponIt)
-    {
-        FWeaponProperties& CurrentProps = *WeaponIt;
-
-        if (CurrentProps.WeaponClass == Weapon)
+        if (CurrentProps.WeaponPower > HighestWeaponPower)
         {
-            checkSlow(Ammunition >= 0);
-            CurrentProps.Ammo += Ammunition;
-            return;
+            HighestWeaponPower = CurrentProps.WeaponPower;
+            CurrentWeaponPower = HighestWeaponPower;
+            BestWeapon = CurrentProps;
         }
     }
 
-    FWeaponProperties WeaponProps;
-    WeaponProps.WeaponClass = Weapon;
-    WeaponProps.WeaponPower = WeaponPower;
-    WeaponProps.Ammo = Ammunition;
-    WeaponsArray.Add(WeaponProps);
+    if (BestWeapon.WeaponClass != nullptr)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("BEST WEAPON: %s"), *BestWeapon.WeaponClass->GetName());
+        SelectWeapon(BestWeapon);
+    }
+}
+
+void UInventory::SelectWeapon(FWeaponProperties Weapon)
+{
+    checkf(Weapon.WeaponClass != nullptr, TEXT("Weapon equip attempted with null class!"));
+
+    UE_LOG(LogTemp, Warning, TEXT("BROADCAST NOW"));
+    OnSelectedWeaponChanged.Broadcast(Weapon);
+    MyOwner->EquipWeapon(Weapon.WeaponClass);
+    CurrentWeapon = Weapon.WeaponClass;
+}
+
+void UInventory::AddWeapon(const FWeaponProperties& Properties)
+{
+    int FoundIndex = WeaponsArray.Find(Properties);
+    if (FoundIndex != INDEX_NONE)
+    {
+        FWeaponProperties& CurrentProps = WeaponsArray[FoundIndex];
+        checkSlow(Properties.Ammo >= || Properties.Ammo == UNLIMITED_AMMO);
+        CurrentProps.Ammo += Properties.Ammo;
+    }
+    else
+    {
+        WeaponsArray.Add(Properties);
+        OnWeaponAdded.Broadcast(Properties);
+    }
 }
 
 void UInventory::ChangeAmmo(TSubclassOf<AWeaponBase> Weapon, const int ChangeAmount)
@@ -85,6 +100,7 @@ void UInventory::ChangeAmmo(TSubclassOf<AWeaponBase> Weapon, const int ChangeAmo
             {
                 CurrentWeaponPower = -1;
                 SelectBestWeapon();
+                OnWeaponRemoved.Broadcast(CurrentProps);
                 return;
             }
         }
@@ -109,11 +125,11 @@ void UInventory::SelectNextWeapon()
 
     if (CurrentIndex == WeaponsArray.Num() - 1)
     {
-        SelectWeapon(WeaponsArray[0].WeaponClass);
+        SelectWeapon(WeaponsArray[0]);
     }
     else
     {
-        SelectWeapon(WeaponsArray[CurrentIndex + 1].WeaponClass);
+        SelectWeapon(WeaponsArray[CurrentIndex + 1]);
     }
 }
 
@@ -123,10 +139,10 @@ void UInventory::SelectPreviousWeapon()
 
     if (CurrentIndex > 0)
     {
-        SelectWeapon(WeaponsArray[CurrentIndex - 1].WeaponClass);
+        SelectWeapon(WeaponsArray[CurrentIndex - 1]);
     }
     else
     {
-        SelectWeapon(WeaponsArray[WeaponsArray.Num() - 1].WeaponClass);
+        SelectWeapon(WeaponsArray[WeaponsArray.Num() - 1]);
     }
 }

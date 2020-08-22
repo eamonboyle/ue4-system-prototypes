@@ -6,6 +6,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/InputSettings.h"
+#include "UI/MainHUD.h"
 #include "Weapons/Inventory.h"
 #include "Weapons/WeaponBase.h"
 
@@ -46,10 +47,7 @@ void APacktMasteringCharacter::BeginPlay()
 	// Call the base class  
 	Super::BeginPlay();
 
-	if (Inventory != nullptr)
-	{
-		Inventory->SelectBestWeapon();
-	}
+	InitializeInventoryHUD();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -105,6 +103,24 @@ void APacktMasteringCharacter::EquipWeapon(TSubclassOf<AWeaponBase> Weapon)
 	if (EquippedWeaponActor != nullptr)
 	{
 		EquippedWeaponActor->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
+	}
+}
+
+void APacktMasteringCharacter::SetInventory(UInventory* Inv)
+{
+	Inventory = Inv;
+	InitializeInventoryHUD();
+}
+
+void APacktMasteringCharacter::InitializeInventoryHUD()
+{
+	APlayerController* Player = CastChecked<APlayerController>(GetController());
+
+	AMainHUD* HUD = Cast<AMainHUD>(Player->GetHUD());
+
+	if (HUD != nullptr)
+	{
+		HUD->InitializeInventory(Inventory);
 	}
 }
 
