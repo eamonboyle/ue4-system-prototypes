@@ -20,6 +20,11 @@ public:
 
     virtual void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent) override;
 
+    virtual bool IsStealthed()
+    {
+        return bIsStealthed;
+    }
+
 protected:
     virtual void AddControllerPitchInput(float Val) override;
     virtual void AddControllerYawInput(float Val) override;

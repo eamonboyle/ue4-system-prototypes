@@ -11,10 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d4944b9-eba5-4f9b-9dd3-d35b346af49b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/FirstPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/FirstPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PacktMastering.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/PacktMastering.uproject" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BS_MeleeAI_IdleRun.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_MoveToHome.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.PacktMastering/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PacktMastering/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/ABP_MeleeAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/ABP_MeleeAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BB_MeleeAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BB_MeleeAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BP_MeleeAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BP_MeleeAIController.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTService_FindTarget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTService_FindTarget.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Public/Characters/StealthCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Public/Characters/StealthCharacter.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +32,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Public/Cameras/IconCamera.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Public/Weapons/WeaponPickup.h" root0="FORCE_HIGHLIGHTING" />
@@ -41,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/UI/SavedActorInterface.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/UI/MainMenuWidget.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringHUD.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -55,7 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Characters/StealthCharacter.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Characters/StealthCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Weapons/WeaponBase.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Weapons/WeaponBase.cpp" />
@@ -77,16 +85,22 @@
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Weapons/Inventory.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/UI/MainMenuWidget.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/UI/MainMenuWidget.cpp" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Characters/StealthCharacter.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1gQUGF7bPZrkzAcXlWwYBsX4ObY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -517,7 +531,7 @@
       <updated>1598046237892</updated>
       <workItem from="1598046284373" duration="4704000" />
       <workItem from="1598089413486" duration="14433000" />
-      <workItem from="1598118064220" duration="10098000" />
+      <workItem from="1598118064220" duration="13743000" />
     </task>
     <servers />
   </component>
@@ -538,6 +552,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
