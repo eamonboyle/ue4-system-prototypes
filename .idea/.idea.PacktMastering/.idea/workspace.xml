@@ -11,17 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d4944b9-eba5-4f9b-9dd3-d35b346af49b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BS_MeleeAI_IdleRun.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_MoveToHome.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_Attack.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PacktMastering/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PacktMastering/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/ABP_MeleeAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/ABP_MeleeAI.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BB_MeleeAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BB_MeleeAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BH_MeleeAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BH_MeleeAI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BP_MeleeAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BP_MeleeAIController.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTService_FindTarget.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTService_FindTarget.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Public/Characters/StealthCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Public/Characters/StealthCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_MoveToHome.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_MoveToHome.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +43,6 @@
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/UI/SavedActorInterface.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/UI/MainMenuWidget.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.h" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringHUD.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -531,7 +524,8 @@
       <updated>1598046237892</updated>
       <workItem from="1598046284373" duration="4704000" />
       <workItem from="1598089413486" duration="14433000" />
-      <workItem from="1598118064220" duration="13743000" />
+      <workItem from="1598118064220" duration="14336000" />
+      <workItem from="1598177909467" duration="635000" />
     </task>
     <servers />
   </component>
@@ -550,6 +544,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
