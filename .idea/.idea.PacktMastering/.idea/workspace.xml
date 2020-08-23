@@ -11,11 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d4944b9-eba5-4f9b-9dd3-d35b346af49b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_Attack.uasset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BP_CountessSpawner.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PacktMastering/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PacktMastering/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BH_MeleeAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BH_MeleeAI.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/ABP_MeleeAI.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/ABP_MeleeAI.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BP_MeleeAIController.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BP_MeleeAIController.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_MoveToHome.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Blueprints/AI/BTTask_MoveToHome.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/FirstPersonCPP/Maps/FirstPersonExampleMap.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/ParagonCountess/Characters/Heroes/Countess/Meshes/S_Countess_Skeleton.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ParagonCountess/Characters/Heroes/Countess/Meshes/S_Countess_Skeleton.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/UI/MainMenuWidget.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringHUD.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/PacktMasteringCharacter.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/PacktMastering/Private/Weapons/Inventory.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -59,7 +66,6 @@
       <list>
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Characters/StealthCharacter.cpp" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Weapons/WeaponBase.h" />
-        <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Weapons/WeaponBase.cpp" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Cameras/IconCamera.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Cameras/IconCamera.cpp" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/PacktMastering.Build.cs" />
@@ -78,9 +84,12 @@
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Weapons/Inventory.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/UI/MainMenuWidget.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/UI/MainMenuWidget.cpp" />
-        <option value="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Public/Characters/StealthCharacter.h" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/Public/AI/MeleeAIController.h" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.h" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/Private/Weapons/WeaponBase.cpp" />
         <option value="$PROJECT_DIR$/Source/PacktMastering/Private/AI/MeleeAIController.cpp" />
+        <option value="$PROJECT_DIR$/Source/PacktMastering/PacktMasteringProjectile.cpp" />
       </list>
     </option>
   </component>
@@ -525,7 +534,7 @@
       <workItem from="1598046284373" duration="4704000" />
       <workItem from="1598089413486" duration="14433000" />
       <workItem from="1598118064220" duration="14336000" />
-      <workItem from="1598177909467" duration="635000" />
+      <workItem from="1598177909467" duration="2747000" />
     </task>
     <servers />
   </component>
@@ -555,10 +564,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="596" y="231" key="RiderGenerateDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598049098398" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1598130280669">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1598181953800">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598130280669" />
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1598181953800" />
     <state x="638" y="258" width="938" height="534" key="find.popup" timestamp="1598049694386">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>

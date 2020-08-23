@@ -55,7 +55,7 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Targeting)
     float AttackRadius;
 
-    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Targeting)
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, SaveGame, Category = Health)
     float Health;
 
 protected:

@@ -65,8 +65,6 @@ void AMeleeAIController::SetReturningHome()
     SightSphere->SetSphereRadius(0.f);
 
     CurrentTarget = nullptr;
-
-    UE_LOG(LogTemp, Warning, TEXT("SET RETURNING HOME"));
 }
 
 void AMeleeAIController::OnReturnedHome()
@@ -74,8 +72,6 @@ void AMeleeAIController::OnReturnedHome()
     HearingSphere->SetSphereRadius(HearingRadius);
     StealthHearingSphere->SetSphereRadius(StealthHearingRadius);
     SightSphere->SetSphereRadius(SightRadius);
-
-    UE_LOG(LogTemp, Warning, TEXT("Returned HOME"));
 }
 
 void AMeleeAIController::OnHearingOverlap(UPrimitiveComponent* OverlappedComp, AActor* Other,
